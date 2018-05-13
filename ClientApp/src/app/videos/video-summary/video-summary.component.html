@@ -1,0 +1,46 @@
+<div class='panel panel-primary' *ngIf='video'>
+  <div class='panel-heading'>
+    {{video.name}}
+  </div>
+
+  <div class='panel-body'>
+    <div class='row'>
+      <div class='col-md-6'>
+        <div class='row'>
+          <div class='col-md-3'>Name:</div>
+          <div class='col-md-6'>{{video.name}}</div>
+        </div>
+        
+        <div class='row'>
+          <div class='col-md-3'>Description:</div>
+          <div class='col-md-6'>{{video.description}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Availability:</div>
+          <div class='col-md-6'>{{video.releaseDate}}</div>
+        </div>
+        <div class="row">
+          <a [routerLink]="['/detail', video.id]" (click)='collapse()'>
+            <span class='glyphicon glyphicon-education'></span> Détail
+          </a>
+        </div>
+       
+      </div>
+
+      <div class='col-md-6'>
+        <img class='center-block img-responsive'
+             [style.width.px]='200'
+             [style.margin.px]='2'
+             [src]='video.imageUrl'
+             [title]='video.name'>
+      </div>
+    </div>
+    <div class="row"></div>
+  </div>
+
+  <div class='panel-footer'>
+    <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+      <i class='glyphicon glyphicon-chevron-left'></i> Back
+    </a>
+  </div>
+</div>

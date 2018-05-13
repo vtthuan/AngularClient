@@ -15,6 +15,7 @@ namespace AngularClient.Persistence
         public DbSet<Language> Languages { get; set; }
         //public DbSet<Question> Questions { get; set; }
         public DbSet<Remarque> Remarques { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         //public DbSet<Transaction> Transactions { get; set; }
         //public DbSet<Ticket> Tickets { get; set; }
         //public DbSet<CoinType> CoinTypes { get; set; }
@@ -26,6 +27,8 @@ namespace AngularClient.Persistence
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<YoutubeMediaInfo>().HasBaseType<MediaInfo>();
+            builder.Entity<DailyMotionMediaInfo>().HasBaseType<MediaInfo>();
             base.OnModelCreating(builder);
         }
 

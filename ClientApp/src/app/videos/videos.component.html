@@ -6,7 +6,7 @@
     <div class="row">
       
         <div class="col" *ngFor="let v of videosFiltered; let i = index">
-          <video-card [video]="v"></video-card>
+          <video-card [video]="v" [routerLink]="['/videos', v.id]"></video-card>
         </div>
         <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
     </div>

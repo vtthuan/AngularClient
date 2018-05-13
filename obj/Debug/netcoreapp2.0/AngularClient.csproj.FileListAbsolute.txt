@@ -9,3 +9,14 @@ C:\Users\Thuan\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.AssemblyInfoI
 C:\Users\Thuan\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.AssemblyInfo.cs
 C:\Users\Thuan\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.dll
 C:\Users\Thuan\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.pdb
+C:\Users\Thuan\Documents\GitHub\AngularClient\bin\Debug\netcoreapp2.0\AngularClient.deps.json
+C:\Users\Thuan\Documents\GitHub\AngularClient\bin\Debug\netcoreapp2.0\AngularClient.runtimeconfig.json
+C:\Users\Thuan\Documents\GitHub\AngularClient\bin\Debug\netcoreapp2.0\AngularClient.runtimeconfig.dev.json
+C:\Users\Thuan\Documents\GitHub\AngularClient\bin\Debug\netcoreapp2.0\AngularClient.dll
+C:\Users\Thuan\Documents\GitHub\AngularClient\bin\Debug\netcoreapp2.0\AngularClient.pdb
+C:\Users\Thuan\Documents\GitHub\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.csprojResolveAssemblyReference.cache
+C:\Users\Thuan\Documents\GitHub\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.csproj.CoreCompileInputs.cache
+C:\Users\Thuan\Documents\GitHub\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.AssemblyInfoInputs.cache
+C:\Users\Thuan\Documents\GitHub\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.AssemblyInfo.cs
+C:\Users\Thuan\Documents\GitHub\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.dll
+C:\Users\Thuan\Documents\GitHub\AngularClient\obj\Debug\netcoreapp2.0\AngularClient.pdb

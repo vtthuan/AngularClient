@@ -13,4 +13,8 @@ export class VideoService {
      return this.http.get<Video[]>(this.baseUrl + "api/videos");
   }
 
+  getVideo(id) {
+    return this.http.get<Video>(this.baseUrl + "api/videos/" + id);
+  }
+
 }

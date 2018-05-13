@@ -12,14 +12,20 @@ namespace AngularClient.Controllers
     [Route("api/videos")]
     public class VideosController : Controller
     {
-        public VideoViewModel[] Get()
+        [HttpGet]
+        public VideoViewModel[] GetAll()
         {
             return new List<VideoViewModel>()
             {
-                new VideoViewModel() {Title = "test", CategoryId = 1},
-                new VideoViewModel() {Title = "otot", CategoryId = 2}
-            
+                new VideoViewModel() {Title = "test", CategoryId = 1, Id=1},
+                new VideoViewModel() {Title = "otot", CategoryId = 2,Id=2}            
+
             }.ToArray();
+        }
+        [HttpGet("{id}", Name = "Get")]
+        public VideoViewModel Get(int id)
+        {
+            return new VideoViewModel() { Title = "test", CategoryId = 1, Id = 1 };
         }
     }
 }

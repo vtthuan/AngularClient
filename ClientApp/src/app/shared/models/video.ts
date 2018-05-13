@@ -1,5 +1,5 @@
 export interface Video {
-  $key: string;
+  id: string;
   title: string;
   category: string;
   thumbnailUrl: string;

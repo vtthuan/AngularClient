@@ -13,8 +13,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
 
@@ -29,19 +32,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\app-routing.module.ts" />
     <None Remove="ClientApp\src\app\shared\models\category.ts" />
+    <None Remove="ClientApp\src\app\shared\models\user.login.ts" />
+    <None Remove="ClientApp\src\app\shared\models\user.registration.ts" />
     <None Remove="ClientApp\src\app\shared\models\video.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\category.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\user.registration.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\user.login.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\video.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Core\Extensions\" />
     <Folder Include="Core\Helpers\" />
-    <Folder Include="Helpers\" />
     <Folder Include="NewFolder\" />
   </ItemGroup>
 
