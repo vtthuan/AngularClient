@@ -1,18 +1,18 @@
-// include directives/components commonly used in features modules in this shared modules
-// and import me into the feature module
-// importing them individually results in: Type xxx is part of the declarations of 2 modules: ... Please consider moving to a higher module...
-// https://github.com/angular/angular/issues/10646  
-
-import { NgModule }           from '@angular/core';
-import { CommonModule }       from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
  
-import {SpinnerComponent} from '../../spinner/spinner.component';  
-
+import { SpinnerComponent} from '../../spinner/spinner.component';  
+import { VideoCardComponent } from '../components/video-card/video-card.component';
+import { AuthGuardService } from "../services/auth-guard.service";
+import { VideoService } from "../services/video.service";
+import { TransactionService } from "../services/transaction.service";
+import { CategoryService } from "../services/category.service";
 
 @NgModule({
-  imports:      [CommonModule],
-  declarations: [SpinnerComponent],
-  exports:      [SpinnerComponent],
-  providers:    []
+  imports: [CommonModule],
+  declarations: [SpinnerComponent, VideoCardComponent],
+  exports: [SpinnerComponent, VideoCardComponent
+    ],
+  providers: [AuthGuardService, VideoService, TransactionService, CategoryService]
 })
 export class SharedModule { }

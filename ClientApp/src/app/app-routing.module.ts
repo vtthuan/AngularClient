@@ -2,16 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from "./home/home.component";
-import { VideoDetailComponent } from "./videos/video-detail/video-detail.component";
-import { VideosComponent } from "./videos/videos.component";
-import { VideoSummaryComponent } from "./videos/video-summary/video-summary.component";
-import { AuthGuardService } from "./shared/auth-guard.service";
+import { VideosComponent } from "./videos/components/videos.component";
+import { VideoSummaryComponent } from "./videos/components/video-summary/video-summary.component";
+import { AuthGuardService } from "./shared/services/auth-guard.service";
+import { PreviewStepComponent } from "./videos/components/video-detail/preview-step/preview-step.component";
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'videos', component: VideosComponent },
-  { path: 'videos/:id', component: VideoSummaryComponent },
-  { path: 'detail/:id', canActivate: [AuthGuardService], component: VideoDetailComponent }
+  { path: 'preview/:id/:transactionId', canActivate: [AuthGuardService], component: PreviewStepComponent }
 ];
 
 @NgModule({

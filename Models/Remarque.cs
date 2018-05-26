@@ -8,8 +8,8 @@
         public string PhraseNative { get; set; }
         public double Min { get; set; }
 
-        //public int NativeLanguageId { get; set; }
-        //public Language NativeLanguage { get; set; }
+        public int NativeLanguageId { get; set; }
+        public Language NativeLanguage { get; set; }
 
         public int VideoId { get; set; }
         public Video Video { get; set; }        

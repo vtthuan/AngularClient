@@ -1,29 +1,29 @@
-﻿using AngularClient.Models;
+﻿using AngularClient.Core;
+using AngularClient.Models;
 using AngularClient.Models.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AngularClient.Persistence
 {
-    public class ApplicationDbContext :  IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext :  IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Video> Videos { get; set; }
         public DbSet<Subtitle> Subtitles { get; set; }
-        //public DbSet<Word> Words { get; set; }
+        public DbSet<Word> Words { get; set; }
         public DbSet<MediaInfo> MediaProvider { get; set; }
         public DbSet<Language> Languages { get; set; }
         //public DbSet<Question> Questions { get; set; }
         public DbSet<Remarque> Remarques { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        //public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
         //public DbSet<Ticket> Tickets { get; set; }
         //public DbSet<CoinType> CoinTypes { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

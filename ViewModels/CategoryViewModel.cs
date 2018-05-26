@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace RTF.Core.ViewModel
+﻿namespace AngularClient.ViewModel
 {
     public class CategoryViewModel
     {

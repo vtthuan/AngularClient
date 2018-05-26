@@ -32,8 +32,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\TransactionController.cs" />
+    <Compile Remove="Persistence\Repositories\CoinRepository.cs" />
+    <Compile Remove="Persistence\Repositories\TicketRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="ClientApp\src\app\app-routing.module.ts" />
     <None Remove="ClientApp\src\app\shared\models\category.ts" />
+    <None Remove="ClientApp\src\app\shared\models\step.ts" />
+    <None Remove="ClientApp\src\app\shared\models\transaction.ts" />
     <None Remove="ClientApp\src\app\shared\models\user.login.ts" />
     <None Remove="ClientApp\src\app\shared\models\user.registration.ts" />
     <None Remove="ClientApp\src\app\shared\models\video.ts" />
@@ -42,15 +50,20 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\category.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\step.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\transaction.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\user.registration.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\user.login.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\models\video.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\videos\video.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\videos\video.routing.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\videos\services\" />
     <Folder Include="Core\Extensions\" />
     <Folder Include="Core\Helpers\" />
-    <Folder Include="NewFolder\" />
+    <Folder Include="Models\Steps\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

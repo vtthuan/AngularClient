@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
-using AngularClient.Models.Identity;
-using AngularClient.Auth;
-using AngularClient.Models;
-using Microsoft.Extensions.Options;
-using AngularClient.ViewModel;
+﻿using AngularClient.Auth;
 using AngularClient.Helpers;
+using AngularClient.Models;
+using AngularClient.Models.Identity;
+using AngularClient.ViewModel;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace AngularClient.Controllers
 {

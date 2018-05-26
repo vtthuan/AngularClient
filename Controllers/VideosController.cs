@@ -22,7 +22,7 @@ namespace AngularClient.Controllers
 
             }.ToArray();
         }
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public VideoViewModel Get(int id)
         {
             return new VideoViewModel() { Title = "test", CategoryId = 1, Id = 1 };
