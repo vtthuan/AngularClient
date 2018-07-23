@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Step } from "../../../../shared/models/step";
+import { Step } from "../../../shared/models/step";
 
 
 @Component({

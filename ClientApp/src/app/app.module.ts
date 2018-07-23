@@ -15,18 +15,12 @@ import { AccountModule } from './account/account.module';
 import { VideoModule } from './videos/video.module';
 import { SharedModule } from './shared/modules/shared.module';
 
-import { NavStepsComponent } from './videos/components/video-detail/nav-steps/nav-steps.component';
-import { PreviewStepComponent } from './videos/components/video-detail/preview-step/preview-step.component';
-
-
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     
-    HomeComponent,
-    NavStepsComponent,
-    PreviewStepComponent
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,

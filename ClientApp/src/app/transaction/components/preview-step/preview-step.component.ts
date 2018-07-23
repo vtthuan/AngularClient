@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Video } from "../../../../shared/models/video";
-
-import { TransactionService } from "../../../../shared/services/transaction.service";
-import { Transaction } from "../../../../shared/models/transaction";
+import { Video } from "../../../shared/models/video";
+import { Transaction } from "../../../shared/models/transaction";
+import { TransactionService } from "../../../shared/services/transaction.service";
 
 @Component({
   selector: 'preview-step',

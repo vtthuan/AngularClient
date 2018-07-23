@@ -18,6 +18,7 @@ export class VideosComponent implements OnInit {
     private routeService: ActivatedRoute
   ) { }
 
+  
   async ngOnInit() {
     this.populateVideos();
   }

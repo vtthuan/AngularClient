@@ -9,6 +9,3 @@ export const routing: ModuleWithProviders = RouterModule.forChild([
   { path: 'videos', component: VideosComponent },
   { path: 'videos/:id', component: VideoSummaryComponent }
 ]);
-
-
-

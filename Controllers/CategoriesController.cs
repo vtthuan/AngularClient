@@ -17,8 +17,8 @@ namespace AngularClient.Controllers
         {
             return new List<CategoryViewModel>()
             {
-                new CategoryViewModel() {Name = "1", Id = 1},
-                new CategoryViewModel() {Name = "2", Id = 2}
+                new CategoryViewModel() {Name = "Categories 1", Id = 1},
+                new CategoryViewModel() {Name = "Categories 1", Id = 2}
 
             }.ToArray();
         }
