@@ -11,7 +11,7 @@ import { VideoService } from "../../shared/services/video.service";
 })
 export class VideosComponent implements OnInit {
 
-  category: string;
+  category: number;
   videosFiltered: Video[] = [];
   videos: Video[] = [];
   constructor(private videoService: VideoService,
@@ -29,12 +29,12 @@ export class VideosComponent implements OnInit {
         this.videos = videos;
         return this.routeService.queryParamMap;
       })
-      .subscribe(params => { this.category = params.get("category"); this.applyFilter(); });
+      .subscribe(params => { this.category = +params.get("category"); this.applyFilter(); });
   }
 
   private applyFilter() {
     this.videosFiltered = (this.category) ?
-      this.videos.filter(v => v.category === this.category) :
+      this.videos.filter(v => v.categoryId === this.category) :
       this.videos;
   }
 

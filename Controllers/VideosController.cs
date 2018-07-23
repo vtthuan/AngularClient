@@ -17,8 +17,8 @@ namespace AngularClient.Controllers
         {
             return new List<VideoViewModel>()
             {
-                new VideoViewModel() {Title = "test", CategoryName = "abc", Id=1},
-                new VideoViewModel() {Title = "otot", CategoryName = "abc", Id=2}            
+                new VideoViewModel() {Title = "test", CategoryName = "1", CategoryId = 1, Id=1},
+                new VideoViewModel() {Title = "otot", CategoryName = "2", CategoryId = 2, Id=2}            
 
             }.ToArray();
         }
