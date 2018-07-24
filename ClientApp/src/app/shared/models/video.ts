@@ -4,4 +4,5 @@ export interface Video {
   categoryId : number;
   categoryName: string;
   thumbnailUrl: string;
+  imageToShow: any;
 }

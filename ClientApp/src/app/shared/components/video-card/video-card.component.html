@@ -1,5 +1,11 @@
 <div *ngIf="video.title" class="card">
-  <img *ngIf="video.thumbnailUrl" class="card-img-top" [src]="video.thumbnailUrl" alt="{{ video.title }}">
+    <!-- <img [src]="video.imageToShow"
+    [alt]="video.title"
+    *ngIf="!isImageLoading; else noImageFound">
+<ng-template #noImageFound>
+    <img src="fallbackImage.png" alt="Fallbackimage">
+</ng-template>   -->
+<img [src]="video.thumbnailUrl"/>
   <div class="card-body">
     <h4 class="card-title">{{ video.title }} - {{video.categoryName}}</h4>
   </div>
