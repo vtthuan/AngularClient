@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AccountModule } from './account/account.module';
 import { VideoModule } from './videos/video.module';
 import { SharedModule } from './shared/modules/shared.module';
+import { TransactionModule } from './transaction/transaction.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SharedModule } from './shared/modules/shared.module';
     AppRoutingModule,
     AccountModule,
     VideoModule,
+    TransactionModule,
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpModule,
     HttpClientModule,

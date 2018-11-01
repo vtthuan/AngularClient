@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using AngularClient.Models.Steps;
+
 namespace AngularClient.ViewModel
 {
     public class TransactionIndexViewModel
@@ -26,6 +29,14 @@ namespace AngularClient.ViewModel
     public abstract class StepTransactionViewModel
     {
         public virtual IEnumerable<StepViewModel> Steps { get; set; }
+        
+        public StepViewModel CurrentStep
+        {
+            get
+            {
+                return Steps.ElementAt(CurrentStepIndex);
+            }
+        }
         
         /// <summary>
         /// index of transaction's steps 

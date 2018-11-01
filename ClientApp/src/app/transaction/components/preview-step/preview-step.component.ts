@@ -14,7 +14,7 @@ export class PreviewStepComponent implements OnInit {
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit() {
-    this.transactionService.getTransaction(this.video.id)
-      .subscribe(transaction => this.transaction = transaction);
+    // this.transactionService.getTransaction(this.video)
+    //   .subscribe(transaction => this.transaction = transaction);
   }
 }

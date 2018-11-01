@@ -17,15 +17,15 @@ namespace AngularClient.Controllers
         {
             return new List<VideoViewModel>()
             {
-                new VideoViewModel() {Title = "test", CategoryName = "1", CategoryId = 1, Id=1},
-                new VideoViewModel() {Title = "otot", CategoryName = "2", CategoryId = 2, Id=2}            
+                new VideoViewModel() {Title = "test", CategoryName = "1", CategoryId = 1, Id=1, ThumbnailUrl = @"api\images?1"},
+                new VideoViewModel() {Title = "otot", CategoryName = "2", CategoryId = 2, Id=2, ThumbnailUrl = @"api\images?2"}            
 
             }.ToArray();
         }
         [HttpGet("{id}")]
         public VideoViewModel Get(int id)
         {
-            return new VideoViewModel() { Title = "test", CategoryId = 1, Id = 1 };
+            return new VideoViewModel() { Title = "test", Description ="abc xyz", CategoryId = 1, Id = 1, ThumbnailUrl = @"api\images?1" };
         }
     }
 }

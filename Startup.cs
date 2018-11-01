@@ -104,6 +104,7 @@ namespace AngularClient
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.Register();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

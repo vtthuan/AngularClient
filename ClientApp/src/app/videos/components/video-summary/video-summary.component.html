@@ -1,28 +1,24 @@
+<form (ngSubmit)="onSubmit()">
 <div class='panel panel-primary' *ngIf='video'>
   <div class='panel-heading'>
-    {{video.name}}
+    {{video.title}}
   </div>
 
   <div class='panel-body'>
     <div class='row'>
       <div class='col-md-6'>
         <div class='row'>
-          <div class='col-md-3'>Name:</div>
-          <div class='col-md-6'>{{video.name}}</div>
+          <div class='col-md-3'>Title:</div>
+          <div class='col-md-6'>{{video.title}}</div>
         </div>
         
         <div class='row'>
           <div class='col-md-3'>Description:</div>
           <div class='col-md-6'>{{video.description}}</div>
         </div>
-        <div class='row'>
-          <div class='col-md-3'>Availability:</div>
-          <div class='col-md-6'>{{video.releaseDate}}</div>
-        </div>
         <div class="row">
-          <button 
-                  class="btn btn-secondary btn-block">
-            Regarder
+          <button type="submit" class="btn btn-secondary btn-block">
+              Regarder
           </button>
         </div>
        
@@ -32,8 +28,8 @@
         <img class='center-block img-responsive'
              [style.width.px]='200'
              [style.margin.px]='2'
-             [src]='video.imageUrl'
-             [title]='video.name'>
+             [src]='video.thumbnailUrl'
+             [title]='video.title'>
       </div>
     </div>
     <div class="row"></div>
@@ -45,3 +41,4 @@
     </a>
   </div>
 </div>
+</form>

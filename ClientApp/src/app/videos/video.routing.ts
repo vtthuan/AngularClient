@@ -7,5 +7,5 @@ import { AuthGuardService } from "../shared/services/auth-guard.service";
 
 export const routing: ModuleWithProviders = RouterModule.forChild([
   { path: 'videos', component: VideosComponent },
-  { path: 'videos/:id', component: VideoSummaryComponent }
+  { path: 'videos/summary/:id', component: VideoSummaryComponent }
 ]);

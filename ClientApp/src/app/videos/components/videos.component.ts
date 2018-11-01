@@ -37,7 +37,7 @@ export class VideosComponent implements OnInit {
       this.videos.filter(v => v.categoryId === this.category) :
       this.videos;
 
-      this.videosFiltered.forEach((key)=> key.thumbnailUrl = "https://picsum.photos/200/300?image=" + (1082+key.id))
+      // this.videosFiltered.forEach((key)=> key.thumbnailUrl = "local")
   }
 
 }

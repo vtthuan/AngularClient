@@ -16,13 +16,13 @@ export class TransactionService {
     this.baseUrl = baseUrl;
   }
 
-  createTransactionIfNotExist(videoId: string ) {
-    let headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
-    let authToken = localStorage.getItem('auth_token');
-    headers.append('Authorization', `Bearer ${authToken}`);
+  createTransactionIfNotExist(video: Video ) : Observable<Transaction> {
+     let headers = new HttpHeaders();
+    // headers.append('Content-Type', 'application/json');
+    // let authToken = localStorage.getItem('auth_token');
+    // headers.append('Authorization', `Bearer ${authToken}`);
 
-    return this.http.post<Transaction>(this.baseUrl + "api/transaction/" + videoId, { headers });
+    return this.http.post<Transaction>(this.baseUrl + "api/transaction/", video, { headers });
   }
 
   getTransaction(transactionId: string) : Observable<Transaction> {

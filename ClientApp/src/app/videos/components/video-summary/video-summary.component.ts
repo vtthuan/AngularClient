@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from "@angular/router";
 import { VideoService } from "../../../shared/services/video.service";
 import { Video } from "../../../shared/models/video";
@@ -14,7 +15,8 @@ export class VideoSummaryComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private router : Router,
     private videoService: VideoService,
-  private transactionService: TransactionService) { }
+  private transactionService: TransactionService,
+  private location: Location) { }
 
   ngOnInit() {
     const param = this.route.snapshot.paramMap.get('id');
@@ -25,8 +27,7 @@ export class VideoSummaryComponent implements OnInit {
   }
 
   viewVideo() {
-    this.transactionService.createTransactionIfNotExist(this.video.id).subscribe(
-      transaction => this.router.navigate([transaction.currentStep.name, this.video.id, transaction.id ]));
+    
   }
 
   getVideo(id: number) {
@@ -34,7 +35,13 @@ export class VideoSummaryComponent implements OnInit {
       video => this.video = video);
   }
 
-  onBack(): void {
+  onSubmit(){
+    this.transactionService.createTransactionIfNotExist(this.video).subscribe(
+      transaction => this.router.navigate([transaction.currentStep.action, this.video.id, transaction.token ]));
+  }
+
+  onBack() {
+    this.location.back();
   }
 
 }

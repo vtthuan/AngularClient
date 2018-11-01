@@ -5,7 +5,7 @@
 <ng-template #noImageFound>
     <img src="fallbackImage.png" alt="Fallbackimage">
 </ng-template>   -->
-<img [src]="video.thumbnailUrl"/>
+<img [src]="_domSanitizer.bypassSecurityTrustUrl(video.thumbnailUrl)" width="200" height="100"/>
   <div class="card-body">
     <h4 class="card-title">{{ video.title }} - {{video.categoryName}}</h4>
   </div>
